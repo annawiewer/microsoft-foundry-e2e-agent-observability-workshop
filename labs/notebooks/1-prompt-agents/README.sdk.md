@@ -1,5 +1,11 @@
 # Building Contoso Travel (Prompt Agent) Using Foundry SDK
 
+> **Prepared workshop note:** If you are in an instructor-led workshop, start
+> from `WORKSHOP-QUICKSTART.md` first. The instructor should already provide a
+> `.env` file and a `WORKSHOP_GROUP_ID`. The notebooks use that group id to
+> prefix shared Foundry resources.
+> For the simplest participant flow, use `STUDENT-LAB-GUIDE.md`.
+
 By now you should have completed the _infastructure setup_ and _dev environment_ setup steps and have a running GitHub Codespaces that is connected to an existing Foundry project in your Azure subscription.
 
 In this path, you'll execute notebooks in order - walking you through the journey of building a Contoso Travel agent, grounding it in custom data and tools, then evaluating and tracing it - and running an AI Red Teaming scan to assess vulnerability to attack.
@@ -9,11 +15,11 @@ In this path, you'll execute notebooks in order - walking you through the journe
 The GitHub Codespaces environment has pre-instealled extensions and tools to support Jupyter notebooks. Just take these actions to "Run" any notebook:
 
 1. Open the notebook (`.ipynb` file) in Visual Studio Code
-1. Click **Select Kernel**, and pick the **Python 3.12** option. 
-1. Clear all outputs first, then **run each cell one at a time** (rather than "Run All") 
-1. Observe the results and understand each step before moving on. 
+1. Click **Select Kernel**, and pick the **Python 3.12** option.
+1. Clear all outputs first, then **run each cell one at a time** (rather than "Run All")
+1. Observe the results and understand each step before moving on.
 
-**IMPORTANT**: Do NOT run the final cell of the notebook until you are done with the lab and have understood the code. Running the final cell will clear out not just the outputs in the notebook but any related assets (e.g., agents) created in Foundry. 
+**IMPORTANT**: Do NOT run the final cell of the notebook until you are done with the lab and have understood the code. Cleanup cells delete Foundry resources. In a prepared shared-project workshop, cleanup cells are blocked unless the instructor sets `WORKSHOP_ALLOW_CLEANUP=1`.
 
 <br/>
 
@@ -31,4 +37,4 @@ The GitHub Codespaces environment has pre-instealled extensions and tools to sup
 | |
 
 **Note**:
-_The AI Red Teaming agent is currently undergoing being updated. You _may_ encounter issues running the notebook or viewing scans in the portal in some contexts in that case. Just pause the notebook for now and keep an eye on this repo for updates on when you can retry that lab_.
+_The AI Red Teaming agent is region- and quota-dependent. The prepared universal workshop project uses a supported region for live red-team scans. If you point the notebooks at a different project whose region does not support red-team evaluations, the notebook will skip the live scan with a clear message._

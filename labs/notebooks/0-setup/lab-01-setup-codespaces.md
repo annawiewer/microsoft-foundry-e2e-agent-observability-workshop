@@ -1,5 +1,9 @@
 # Lab 01: Setup Development Environment
 
+> **Instructor-led workshop:** Skip this lab if your instructor has already
+> prepared Codespaces or a local dev container and provided `labs\notebooks\.env`.
+> Start from `WORKSHOP-QUICKSTART.md` instead.
+
 ## 1. Launch GitHub Codespaces
 
 1. [Fork the repository](https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop/fork) to your own profile to get your sandbox.
@@ -42,7 +46,7 @@ _Also check that the AI Toolkit and Azure extensions for VS Code are using the r
 1. It should prompt you to log into Azure as shown. Complete this step, then let the script run till complete.
     ![Run Env Script](assets/26-run-env-script.png)
 
-1. You should see this success message - and a `.env` file with the right variables created should now be visible in the `labs/notebooks` folder. 
+1. You should see this success message - and a `.env` file with the right variables created should now be visible in the `labs/notebooks` folder.
     ![Dev Env Ready](assets/27-dev-env-ready.png)
 1. Congratulations - your local env variables are set.
 

@@ -1,10 +1,25 @@
 # Workshop: "Observe, Optimize & Protect Your AI Agents In Microsoft Foundry"
 
+## Facilitated workshop start here
+
+If you are joining an instructor-led workshop where infrastructure and
+environment values are already prepared, do **not** start with the setup labs.
+
+| Audience | Start here |
+|----------|------------|
+| Participants | [Workshop Quickstart](./WORKSHOP-QUICKSTART.md), then [Student Lab Guide](./STUDENT-LAB-GUIDE.md) |
+| Instructors | [Instructor Guide](./INSTRUCTOR-GUIDE.md) |
+| Self-paced learners | Continue with the standard setup flow below |
+
+The prepared workshop mode currently assumes one shared Foundry project for the
+class. Participants must use assigned group ids and must not run notebook
+cleanup sections unless instructed.
+
 ## Session Description
 
 **Duration:** 75 minutes
 
-Want to build trustworthy AI agents? The hard part lies NOT in making them work the first time, but in **keeping them working continuously** over the lifetime of the application - even as models get updated, prompts get refined, retrieval pipelines drift, and real-world use uncovers edge cases. To do this, we need a unified platform that provides end-to-end observability - 
+Want to build trustworthy AI agents? The hard part lies NOT in making them work the first time, but in **keeping them working continuously** over the lifetime of the application - even as models get updated, prompts get refined, retrieval pipelines drift, and real-world use uncovers edge cases. To do this, we need a unified platform that provides end-to-end observability -
 with rich developer tools that take us seamlessly from _detecting_ AI quality issues to _diagnosing_ them, and _optimizing_ solutions for performance in an iterative fashion.
 
 In this workshop, we'll get hands-on experience with the Microsoft Foundry observabilty platform by exploring one of two available paths:
@@ -16,7 +31,7 @@ The first option is more traditional, giving you a sense for the concepts, tools
 
 ## Application Scenario
 
-We'll use a consistent scenario across all labs, allowing us to think about features and outcomes in the context of a real-world use case. 
+We'll use a consistent scenario across all labs, allowing us to think about features and outcomes in the context of a real-world use case.
 
 **Contoso Travel** is a fictitious mid-size travel agency whose team of human advisors can no longer keep up with the volume of customer inquiries for booking travel. They need an AI-powered travel assistant — a system of intelligent agents that can search relevant inventory (e.g., hotels, flights, car rentals) to make personalized recommendations, and deliver customized itimeraries across multi-turn conversations.
 
@@ -27,7 +42,7 @@ In this workshop, we'll trace the AI developer journey from _planning_ to _proto
 1. _Observe_ agentic execution with OpenTelemetry traces
 1. _Optimize_ agentic performance assisted by Foundry skills
 1. _Protect_ agents from attacks using Red Teaming scans
-1. _Deploy_ agents, then monitor & analyze insights with Ask AI 
+1. _Deploy_ agents, then monitor & analyze insights with Ask AI
 
 We'll achieve this using the Microsoft Foundry platform tools and workflows. By the end of this workshop you should be able to:
 
@@ -41,6 +56,9 @@ We'll achieve this using the Microsoft Foundry platform tools and workflows. By 
 
 ### 1. Getting Started
 
+For a facilitated workshop, use [Workshop Quickstart](./WORKSHOP-QUICKSTART.md)
+instead of Step 1 and Step 2 below.
+
 This workshop has two paths to choose from:
 - **Base Path**: Complete Steps 1 & 2 to setup your infra & dev environment.
 - **Path A**: Do Step 3. Uses _Foundry Skills_ to automate the eval-optimize loop.
@@ -52,7 +70,7 @@ Completing the end-to-end journey with _either_ path can take 60 minutes or more
 |:---|:---|:---|
 | 1. | [Infrastructure Setup](./labs/notebooks/0-setup/lab-00-setup-project.md) | Foundry Portal · Setup Foundry project |
 | 2. | [Dev Environment Setup](./labs/notebooks/0-setup/lab-01-setup-codespaces.md) | GitHub Codespaces · Setup local .env |
-| 3. | [Activate Observe Skill](./labs/notebooks/1-prompt-agents/README.skills.md)| Foundry Skills · Run eval-optimize loop  |
+| 3. | [Activate Observe Skill](./labs/notebooks/1-prompt-agents/README.skills.md)| Foundry Skills · Run eval-optimize loop |
 | 4. | [Build It Step-By-Step](./labs/notebooks/1-prompt-agents/README.sdk.md)| Foundry SDK · Go plan-production manually |
 | | | |
 
@@ -62,9 +80,9 @@ The current workshop (v1) is setup for use with _prompt_ agents. The next versio
 **The key takeaway** is that the Microsoft Foundry Observability platform will work effectively with _any_ agent (build using any programming language or framework) provided it supports OpenTelemetry-compliant traces and Responses API compliant endpoints.
 
 
-### 3. Related Resources 
+### 3. Related Resources
 
-The Microsoft _Foundry Control Plane_ provides tools and features to support _security, compliance, fleet management and observability_ for your agentic AI solutions - along with a unified role-aware management interface accessed through the "Operate" tab of the Microsoft Foundry portal. 
+The Microsoft _Foundry Control Plane_ provides tools and features to support _security, compliance, fleet management and observability_ for your agentic AI solutions - along with a unified role-aware management interface accessed through the "Operate" tab of the Microsoft Foundry portal.
 
 ![FCP](./labs/assets/foundry-control-plane.png)
 

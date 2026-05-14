@@ -1,5 +1,9 @@
 # Lab 00: Setup Your Foundry Project
 
+> **Instructor-led workshop:** Skip this lab if your instructor has already
+> prepared a shared Foundry project. Start from `WORKSHOP-QUICKSTART.md`
+> instead.
+
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 
 
@@ -68,7 +72,7 @@ The agent is now ready to test in playground. Note: If you do _not_ see the Tool
 ## Step 10: Create App Insights
 
 But first, select the Traces tab. **Save the agent if you are prompted to do so** before your switch.
-You should see the view below. Click "Connect" to create and connect the App Insights resource. 
+You should see the view below. Click "Connect" to create and connect the App Insights resource.
 
 ![Create App Insights](assets/10-create-app-insights.png)
 
@@ -134,7 +138,7 @@ Keep responses focused and helpful.
 ## Step 15b: View Agent Response
 
 1. View the agent response. Note the metrics below the response line.
-1. Observe the _AI Quality_ and _Safety_ metrics in the line below the response. 
+1. Observe the _AI Quality_ and _Safety_ metrics in the line below the response.
 1. Hover over each number - you should see the custom metrics used and their Pass/Fail status
 
 ![View Agent Response](assets/15-view-agent-response.png)
@@ -167,7 +171,7 @@ Test one of the starter prompts by clicking on it.
 
 ## Step 19: View Agent Response
 
-1. View the response. THe agent will prompt you for addition information as instructed. 
+1. View the response. THe agent will prompt you for addition information as instructed.
 1. Add your responses. This is creating a conversation with state.
 1. Note how the agent remembers and uses context from the history.
 
@@ -239,7 +243,7 @@ The preview agent option gives you a UI for your agent (think web app)
 
 ## Step 23: Test Preview
 
-Note that the preview shows configured starter prompts. 
+Note that the preview shows configured starter prompts.
 
 ![Test Preview](assets/23-test-preview.png)
 
@@ -261,7 +265,7 @@ But note that if you return to agent you can now see this interaction captured i
 
 By now you should have a sense for the _Tracing_ and _Evaluations_ capabilities in the agent playground. Microsoft Foundry has a large number of built-in evaluators that you can also invoke _code-first_.
 
-1. Click on the Evaluations item in the sidebar menu. 
+1. Click on the Evaluations item in the sidebar menu.
 1. Select the _Evaluators catalog_ to see the full list of supported evaluators
 1. Filter to see evaluators for a particular category - e.g., agents
 1. Use "Ask AI" to get explanations for any of them - e.g., ask:

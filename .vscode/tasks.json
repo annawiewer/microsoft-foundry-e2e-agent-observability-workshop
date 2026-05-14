@@ -2,6 +2,15 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Workshop: Check readiness",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} labs/notebooks/check-workshop-ready.py",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Validate prerequisites",
       "type": "aitk",
       "command": "debug-check-prerequisites",

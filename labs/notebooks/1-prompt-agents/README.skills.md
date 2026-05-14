@@ -4,7 +4,7 @@ The [microsoft-foundry skill](https://github.com/microsoft/GitHub-Copilot-for-Az
 
 ## 1. Understand sub-skills
 
-The microsoft-foundry skill provides structured workflows or _sub-skills_ that cover key capabilities like deploying, evaluating, invoking, and troubleshooting AI agents hosted on Microsoft Foundry. 
+The microsoft-foundry skill provides structured workflows or _sub-skills_ that cover key capabilities like deploying, evaluating, invoking, and troubleshooting AI agents hosted on Microsoft Foundry.
 
 Here is the current subset of sub-skills available - note that these are in early preview and will have issues and breaking changes. **We will focus on the "observe" skill - your feedback here will be useful**.
 
@@ -99,7 +99,14 @@ Let's see if we can trigger the observe skill by prompting our coding agent with
 Use this prompt in your copilot chat window:
 
 ```bash
-Evaluate my agent at <endpoint> using the observe skill
+Use the Microsoft Foundry observe skill for this prepared workshop.
+
+Project endpoint: <endpoint>
+Group id: <group-id>
+
+Evaluate the Contoso Travel agent and help me understand the results.
+Prefix every dataset, evaluation, run, and version you create with my group id.
+Do not delete, replace, or clean up shared resources unless I explicitly ask.
 ```
 
 Replace <endpoint> with the Endpoint link for your Foundry project. This explicit priming with endpoint and name of skill is just a way of giving it even clearer hints to trigger the specific skill. However, note that coding agent behavior can be non-deterministic - and the foundry-skills usage may require more trial-and-error at this time.
