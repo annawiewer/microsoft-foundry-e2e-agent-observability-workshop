@@ -285,10 +285,10 @@ By now you should have a sense for the _Tracing_ and _Evaluations_ capabilities 
 1. Click on the _Evaluations_ tab in the **sidebar** of the Portal. This takes you to Evaluations across the project (not specific to that agent)
 1. Click on the Red Teaming tab
     ![Red Teaming](assets/29-red-teaming-create.png)
-1. For now, select the _Model_ option and pick the default model used in your agent (e.g, gpt-4.1)
+1. For now, select the _Model_ option and pick the default model used in your agent.
 1. Walk through the dialog and select at most 1-2 options for risk categories and attack strategies (just to have scan complete).
 1. Submit the scan. This takes a while to complete - we will revisit it later.
 
 ## Next: Set Up Dev Environment
 
-Now that your infrastructure is ready - let's [Setup Development Environment](./lab-01-setup-codespaces.md) next.
+Now that your infrastructure is ready - let's [set up the local development environment](./lab-01-setup-local-dev-container.md) next.

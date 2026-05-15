@@ -270,7 +270,7 @@ else
         echo -e "${GREEN}  ✓ Model deployment: ${DEPLOY_NAME}${NC}"
         set_env_if_empty "AZURE_AI_MODEL_DEPLOYMENT_NAME" "${DEPLOY_NAME}" || true
     else
-        echo -e "${YELLOW}  ⚠ No model deployments found. Deploy a model (e.g., gpt-4.1-mini) in the Foundry portal.${NC}"
+        echo -e "${YELLOW}  ⚠ No model deployments found. Deploy the model specified by your instructor in the Foundry portal.${NC}"
     fi
 
     # ── Find Application Insights ──

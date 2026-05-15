@@ -9,7 +9,7 @@
 - **Location**: `labs/notebooks/0-setup/slides/`
 - **Images**: Reference existing screenshots from `../assets/` folder; use placeholders where images don't exist
 
-## Slide Structure (4 Steps from README)
+## Slide Structure (3 Steps from README)
 
 ### Opening Section (~5 min, ~4 slides)
 
@@ -18,7 +18,7 @@
 | 1 | Title Slide | Workshop title, session description, duration |
 | 2 | Contoso Travel Scenario | The application scenario — why an AI travel assistant? |
 | 3 | Learning Objectives | Observe, Optimize, Protect, Deploy |
-| 4 | Workshop Paths Overview | Base Path (Steps 1-2) + Path A (Step 3) vs Path B (Step 4) |
+| 4 | Workshop Flow Overview | Setup + SDK notebook labs |
 
 ### Step 1: Infrastructure Setup (~15 min, ~10 slides)
 
@@ -42,35 +42,22 @@
 | # | Slide | Image Reference |
 |---|-------|----------------|
 | 17 | Step 2 Title — Dev Environment Setup | — |
-| 18 | Fork Repo & Launch Codespaces | — (placeholder) |
+| 18 | Open Local Dev Container | — (placeholder) |
 | 19 | Run setup-env.sh Script | `26-run-env-script.png`, `27-dev-env-ready.png` |
-| 20 | Choose Your Adventure | Paths A vs B decision point |
+| 20 | Start SDK Notebook Labs | Main lab sequence |
 
-### Step 3: Foundry Skills Path (~15 min, ~8 slides)
-
-| # | Slide | Image Reference |
-|---|-------|----------------|
-| 21 | Step 3 Title — Observe with Foundry Skills | — |
-| 22 | What Are Foundry Skills? | Sub-skills table |
-| 23 | Set Default Project in AI Toolkit | — (placeholder) |
-| 24 | Verify Skill Installation | — (placeholder) |
-| 25 | Explore Sub-Skills | `30-observability-loop.png`, `31-entry-points.png` |
-| 26 | The Observe Loop | `32-loop-overview.png` |
-| 27 | Activate GitHub Copilot Chat | Prompt example |
-| 28 | Capture & Share Feedback | What you can try — evals, optimization, comparison |
-
-### Step 4: Foundry SDK Path (~15 min, ~8 slides)
+### Step 3: Foundry SDK Notebook Labs (~15 min, ~8 slides)
 
 | # | Slide | Image Reference |
 |---|-------|----------------|
-| 29 | Step 4 Title — Build with Foundry SDK | — |
-| 30 | How to Run Notebooks | Kernel selection, run one cell at a time |
-| 31 | Lab 01: Validate Environment | `lab-01-setup.ipynb` |
-| 32 | Lab 02: Create Basic Agent | `lab-02-agent.ipynb` |
-| 33 | Lab 03: Add Tools & Workflows | `lab-03a-tools.ipynb`, `lab-03b-workflow.ipynb` |
-| 34 | Lab 04: Instrument with Tracing | `lab-04-tracing.ipynb` |
-| 35 | Lab 05: Run Evaluations | `lab-05-evaluation.ipynb` |
-| 36 | Lab 06: Red Teaming | `lab-06-redteam.ipynb` |
+| 21 | Step 3 Title — Build with Foundry SDK | — |
+| 22 | How to Run Notebooks | Kernel selection, run one cell at a time |
+| 23 | Lab 01: Validate Environment | `lab-01-setup.ipynb` |
+| 24 | Lab 02: Create Basic Agent | `lab-02-agent.ipynb` |
+| 25 | Lab 03: Add Tools & Workflows | `lab-03a-tools.ipynb`, `lab-03b-workflow.ipynb` |
+| 26 | Lab 04: Instrument with Tracing | `lab-04-tracing.ipynb` |
+| 27 | Lab 05: Run Evaluations | `lab-05-evaluation.ipynb` |
+| 28 | Lab 06: Red Teaming | `lab-06-redteam.ipynb` |
 
 ### Closing Section (~5 min, ~4 slides)
 
@@ -133,13 +120,13 @@ echo "Exports complete. Files in $OUTPUT_DIR/"
 2. **Speaker notes**: Use MARP `<!-- speaker notes -->` syntax for timing guidance
 3. **Dual-use**: Content-rich slides (not just bullet headers) so deck works standalone
 4. **Contoso Travel**: Used as running example throughout, matching the lab content
-5. **Both paths equal**: Steps 3 and 4 get equal slide counts and depth
+5. **Single lab path**: Step 3 focuses on the SDK notebook sequence; optional labs are instructor-led
 
 ## Requirements Status
 
 - [x] MARP CLI format
 - [x] 60-minute pacing
-- [x] Based on 4 README steps
+- [x] Based on 3 README steps
 - [x] Images from 0-setup/assets
 - [x] Export to PDF, HTML, PPTX
 - [x] Plan stored as slides/plan.md

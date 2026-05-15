@@ -51,7 +51,7 @@ REQUIRED_PATHS = (
     "STUDENT-LAB-GUIDE.md",
     "INSTRUCTOR-GUIDE.md",
     "labs/notebooks/sample.env",
-    "labs/notebooks/1-prompt-agents/README.skills.md",
+    "labs/notebooks/0-setup/lab-01-setup-local-dev-container.md",
     "labs/notebooks/1-prompt-agents/README.sdk.md",
     "labs/notebooks/1-prompt-agents/workshop_utils.py",
     "labs/notebooks/1-prompt-agents/lab-01-setup.ipynb",

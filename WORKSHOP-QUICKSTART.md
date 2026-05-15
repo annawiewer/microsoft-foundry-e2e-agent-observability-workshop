@@ -3,10 +3,27 @@
 Use this page when an instructor has already prepared the Microsoft Foundry
 project and the development environment for the class.
 
-If you are doing the workshop on your own, start with the normal setup labs in
-`labs\notebooks\0-setup` instead.
+If you are doing the workshop on your own, start with
+[Lab 00: Setup Your Foundry Project](./labs/notebooks/0-setup/lab-00-setup-project.md)
+instead.
 
 ## Before you start
+
+### What you need
+
+This workshop uses a **local VS Code dev container**. Install or prepare these
+before the workshop:
+
+| Requirement | Why you need it |
+| --- | --- |
+| [Visual Studio Code](https://code.visualstudio.com/) | Opens the repository and notebooks |
+| [Docker Desktop](https://www.docker.com/products/docker-desktop/) | Runs the dev container |
+| [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) | Reopens the repository inside the container |
+| [Git](https://git-scm.com/) | Clones the repository locally |
+| Local clone of this repository | Contains the lab files |
+
+You do **not** need to install Python packages manually. The dev container
+includes the workshop tools and notebook environment.
 
 Your instructor should give you:
 
@@ -16,7 +33,7 @@ Your instructor should give you:
 | Foundry project endpoint | `https://foundry-ifm-ai-academy-hackathon.services.ai.azure.com/api/projects/hackathon-labs` |
 | Model deployment name | `gpt-5.4` |
 | Group id in `.env` | `WORKSHOP_GROUP_ID=G01` |
-| Which path to follow | Foundry Skills, SDK notebooks, or both |
+| Notebook sequence | Main SDK labs, plus optional labs if instructed |
 
 After this page, use the [Student Lab Guide](./STUDENT-LAB-GUIDE.md) as your
 main lab checklist.
@@ -29,28 +46,44 @@ other groups:
 3. Do not delete agents, evaluations, traces, deployments, or conversations in the Foundry portal.
 4. If you see an error, stop and ask the instructor before retrying many times.
 
-## Choose your environment
+## Set up local VS Code
 
-### Option 1: GitHub Codespaces
+### 1. Install the required programs
 
-Use this if you are not sure which environment to choose.
+Do this before the workshop starts:
 
-1. Open the repository in GitHub.
-2. Select **Code**.
-3. Select **Codespaces**.
-4. Start the Codespace prepared by your instructor, or create a new one if instructed.
-5. Wait until setup finishes and the terminal is idle.
-6. Confirm that `labs\notebooks\.env` exists. If it does not, ask the instructor for the prepared environment file.
+1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
+2. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+3. Start Docker Desktop and wait until it says it is running.
+4. In VS Code, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+5. Download and install [Git](https://git-scm.com/).
 
-### Option 2: Local VS Code dev container
+If Docker Desktop, Git, or VS Code asks you to restart your computer, restart
+before continuing.
 
-Use this only if your instructor has asked you to work locally.
+### 2. Clone the repository
 
-1. Install VS Code, Docker Desktop, and the Dev Containers extension before the workshop.
-2. Open this repository in VS Code.
-3. Select **Reopen in Container** when prompted.
-4. Wait until setup finishes and the terminal is idle.
-5. Confirm that `labs\notebooks\.env` exists. If it does not, ask the instructor for the prepared environment file.
+Open PowerShell or another terminal and run:
+
+```powershell
+cd $HOME\Desktop
+git clone https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop.git
+cd microsoft-foundry-e2e-agent-observability-workshop
+code .
+```
+
+If your instructor gives you a different repository URL, use that URL in the
+`git clone` command instead.
+
+If `code .` does not open VS Code, open VS Code manually and select
+**File > Open Folder...**, then choose the cloned repository folder.
+
+### 3. Open the dev container
+
+1. When VS Code opens, select **Reopen in Container**.
+2. If you do not see the prompt, open the Command Palette and select **Dev Containers: Reopen in Container**.
+3. Wait until setup finishes and the terminal is idle.
+4. Confirm that `labs\notebooks\.env` exists. If it does not, ask the instructor for the prepared environment file.
 
 ## Run the readiness check
 
@@ -64,27 +97,15 @@ Before starting the labs:
 If the final line says `Workshop readiness: FAIL`, stop and ask the instructor
 for help. If it says `PASS with warnings`, read the warnings before continuing.
 
-## Path A: Foundry Skills
+## SDK notebook labs
 
-This path uses GitHub Copilot Chat and Foundry Skills to guide the
-observe-optimize loop.
-
-Start here:
-
-1. Open [Student Lab Guide](./STUDENT-LAB-GUIDE.md).
-2. Copy the Path A prompt and fill in your endpoint and group id.
-3. Use your group id in any agent, evaluation, dataset, or version names.
-4. When Copilot suggests deleting or replacing shared resources, ask the instructor first.
-
-## Path B: Foundry SDK notebooks
-
-This path uses Jupyter notebooks. You do not need to write code, but you will run
-notebook cells one at a time.
+The workshop uses Jupyter notebooks. You do not need to write code, but you will
+run notebook cells one at a time.
 
 Start here:
 
 1. Open [Student Lab Guide](./STUDENT-LAB-GUIDE.md).
-2. Follow the Path B notebook table.
+2. Follow the SDK notebook table.
 3. Select the Python 3.12 kernel when VS Code asks.
 4. Run one cell at a time.
 5. Stop before any section named `Cleanup`.
@@ -110,7 +131,7 @@ Do not run these during a prepared workshop unless instructed:
 | File or section | Why |
 | --- | --- |
 | `labs\notebooks\0-setup\lab-00-setup-project.md` | Infrastructure is already prepared |
-| `labs\notebooks\0-setup\lab-01-setup-codespaces.md` | Environment is already prepared |
+| `labs\notebooks\0-setup\lab-01-setup-local-dev-container.md` | Environment is already prepared |
 | Notebook `Cleanup` sections | They delete shared Foundry resources |
 | Portal delete actions | They can affect other groups |
 

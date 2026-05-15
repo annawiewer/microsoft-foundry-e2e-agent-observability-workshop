@@ -89,7 +89,7 @@ Models get updated. Prompts get refined. Retrieval pipelines drift. Real-world u
 
 **By the end, you will be able to:**
 1. 🔍 **Observe** agentic execution with OpenTelemetry traces
-2. ⚡ **Optimize** agentic performance with Foundry Skills
+2. ⚡ **Evaluate** agent quality and safety with Foundry Evaluations
 3. 🛡️ **Protect** agents from attacks using Red Teaming scans
 4. 🚀 **Deploy** agents, then monitor & analyze with Ask AI
 
@@ -120,25 +120,24 @@ Duration: ~2 min
 
 ---
 
-# Workshop Paths
+# Workshop Flow
 
 This workshop traces the AI developer journey from **planning → prototyping → production**.
 
 | Step | What You'll Do | Tool |
 |:---|:---|:---|
 | **1** | Infrastructure Setup | Foundry Portal |
-| **2** | Dev Environment Setup | GitHub Codespaces |
-| **3** | Observe with Foundry Skills | Coding Agent + Skills |
-| **4** | Build Step-by-Step with SDK | Foundry SDK + Notebooks |
+| **2** | Dev Environment Setup | Local VS Code dev container |
+| **3** | Build, observe, evaluate, and protect | Foundry SDK + Notebooks |
 
-### Choose Your Adventure
-- **Base Path**: Complete Steps 1 & 2 (required for both)
-- **Path A**: Step 3 — Coding agent automates the eval-optimize loop
-- **Path B**: Step 4 — Traditional code-first, step-by-step approach
+### Main Lab Path
+- Complete Steps 1 & 2 first.
+- Then run the SDK notebooks one cell at a time.
+- Optional workflow and red-team labs are instructor-led.
 
 <!--
 SPEAKER NOTES:
-Explain the two paths. Steps 1-2 are shared. Then attendees pick Path A or Path B. Both take ~30 min. Pick one, try the other if time permits.
+Explain that the workshop uses one path: setup first, then SDK notebooks. Optional labs are run only when the instructor includes them.
 Duration: ~3 min
 -->
 
@@ -202,7 +201,7 @@ Once provisioning completes, you'll see your **Foundry project landing page**.
 
 <!--
 SPEAKER NOTES:
-Point out the endpoint URL. This is important for both the Skills path and SDK path.
+Point out the endpoint URL. The SDK notebook labs use it to connect to the Foundry project.
 Duration: ~1 min
 -->
 
@@ -366,7 +365,7 @@ Duration: ~2 min
 - Create **custom evaluators** for domain-specific criteria
 
 ### Red Teaming
-- Select your model (e.g., gpt-4.1)
+- Select the model deployment provided by your instructor
 - Pick 1-2 risk categories and attack strategies
 - Submit scan (runs in background)
 
@@ -383,7 +382,7 @@ Duration: ~2 min
 <!-- _class: section-title -->
 
 # Step 2: Dev Environment Setup
-### Configuring GitHub Codespaces
+### Configuring a local VS Code dev container
 
 ⏱️ ~5 minutes
 
@@ -394,17 +393,19 @@ Now that infrastructure is ready, let's set up the development environment.
 
 ---
 
-# Fork & Launch GitHub Codespaces
+# Open the Local Dev Container
 
-1. **Fork** the [workshop repository](https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop/fork)
-2. Click the **Code** button → **Codespaces** tab → **Create Codespace**
-3. Wait for the IDE to fully load (this takes a few minutes)
+1. Install **VS Code**, **Docker Desktop**, the **Dev Containers** extension, and **Git**
+2. Clone the workshop repository locally
+3. Open the repository folder in VS Code
+4. Select **Reopen in Container**
+5. Wait until setup finishes and the terminal is idle
 
-The Codespace comes pre-configured with:
-- ✅ Python 3.12 + Jupyter extensions
-- ✅ Azure CLI + AI Toolkit extension
-- ✅ GitHub Copilot + Foundry Skills
-- ✅ All required dependencies
+The dev container includes:
+- Python 3.12 + Jupyter extensions
+- Azure CLI + Jupyter support
+- Jupyter notebook support
+- All required dependencies
 
 <!--
 SPEAKER NOTES:
@@ -437,22 +438,21 @@ Duration: ~2 min
 
 ---
 
-# Choose Your Path
+# Start the SDK Notebook Labs
 
 You're now ready to start the hands-on labs!
 
-| Path | Step | Approach | Best For |
-|:---|:---|:---|:---|
-| **Path A** | Step 3 | Foundry Skills + Coding Agent | Exploring AI-assisted dev workflows |
-| **Path B** | Step 4 | Foundry SDK + Notebooks | Understanding concepts step-by-step |
+| Lab | Tool | What You'll Do |
+|:---|:---|:---|
+| Main SDK notebooks | Foundry SDK + Jupyter | Build, trace, and evaluate a Contoso Travel agent |
+| Optional workflow lab | Jupyter | Explore a more complex multi-agent workflow |
+| Optional red-team lab | Foundry Evaluations | Run instructor-led adversarial testing |
 
-> **Recommendation:** Try Path A first for an early preview of coding agent capabilities, then explore Path B for deeper understanding.
-
-Each path takes **~30 minutes**. Pick one, then try the other if time permits.
+> Run notebook cells one at a time and stop before any `Cleanup` section.
 
 <!--
 SPEAKER NOTES:
-Both paths lead to the same outcome — an evaluated, traced, and protected agent. The difference is the developer experience.
+Route everyone into the SDK notebook sequence. Optional labs depend on time, quota, and instructor direction.
 Duration: ~1 min
 -->
 
@@ -460,153 +460,14 @@ Duration: ~1 min
 
 <!-- _class: section-title -->
 
-# Step 3: Observe with Foundry Skills
-### Path A — Coding Agent Automation
+# Step 3: Build with Foundry SDK
+### SDK Notebook Labs
 
 ⏱️ ~15 minutes
 
 <!--
 SPEAKER NOTES:
-Path A uses Foundry Skills — a set of structured workflows that teach coding agents how to manage the full agent lifecycle.
--->
-
----
-
-# What Are Foundry Skills?
-
-The **microsoft-foundry** skill provides structured workflows (sub-skills) for coding agents:
-
-| Workflow | What It Does |
-|:---|:---|
-| **observe** 🌟 | Evaluate quality via batch evals, optimize prompts, compare versions |
-| create | Scaffold new agent projects (Python/C#) |
-| deploy | Containerize, push to ACR, manage deployments |
-| invoke | Send messages, run conversations |
-| trace | Query traces in App Insights |
-| eval-datasets | Harvest production traces into eval datasets |
-
-> The **observe** skill is our focus — it automates the evaluate-optimize loop.
-
-<!--
-SPEAKER NOTES:
-Skills are like instruction manuals for coding agents. The observe skill is the star — it orchestrates batch evaluations, prompt optimization, and version comparison.
-Duration: ~2 min
--->
-
----
-
-# Set Up AI Toolkit & Verify Skill
-
-### Set Default Project
-1. Click **AI Toolkit** icon in VS Code (left sidebar)
-2. Under **My Resources**, click **"Set default"** → select your Foundry project
-3. Verify you can see your models and agents in VS Code
-
-### Verify Foundry Skill
-1. Open Command Palette (`Ctrl+Shift+P`)
-2. Search for **"Chat: Configure Skill"**
-3. Verify `microsoft-foundry` is listed
-
-If missing, search for **"AI Toolkit: Install Foundry Skill"** and install it.
-
-<!--
-SPEAKER NOTES:
-The AI Toolkit extension bridges VS Code and Foundry. Setting the default project enables the coding agent to discover your agents, models, and traces.
-Duration: ~2 min
--->
-
----
-
-# Explore the Observe Skill
-
-The observe skill defines an **observability loop**:
-
-![w:800](../assets/30-observability-loop.png)
-
-<!--
-SPEAKER NOTES:
-This is the core workflow. The skill guides the coding agent through dataset creation, batch evaluation, results analysis, prompt optimization, and version comparison. It's an iterative loop.
-Duration: ~2 min
--->
-
----
-
-# Skill Entry Points & Loop Overview
-
-### How to trigger the skill
-The skill recognizes keywords like "evaluate", "observe", "optimize" in your chat prompts.
-
-![w:480](../assets/31-entry-points.png) ![w:480](../assets/32-loop-overview.png)
-
-The coding agent will:
-1. Inspect your repo state and environment variables
-2. Kick off the workflow with best practices for evaluations
-3. Prompt you for decisions along the way
-
-<!--
-SPEAKER NOTES:
-Entry points are natural language triggers. The skill documentation teaches the coding agent what to do. It's like a recipe card.
-Duration: ~2 min
--->
-
----
-
-# Activate the Observe Skill
-
-### Start GitHub Copilot Chat
-1. Click the **Copilot Chat** button in VS Code
-2. Ensure **Foundry MCP** server is active:
-   - Command Palette → **"MCP: List Servers"**
-   - Start the Foundry MCP server if needed
-
-### Trigger the Observe Skill
-```text
-Evaluate my agent at <your-project-endpoint> using the observe skill
-```
-
-Replace `<your-project-endpoint>` with your actual Foundry project endpoint.
-
-<!--
-SPEAKER NOTES:
-This is the moment of truth! The coding agent will start the observe workflow. It may ask you questions about which agent to evaluate, what dataset to use, etc. Follow along!
-Duration: ~2 min
--->
-
----
-
-# What You Can Try
-
-The observe skill can help you:
-
-- ✅ **Create evaluation datasets** from traces or from scratch
-- ✅ **Run batch evaluations** on your agent endpoint
-- ✅ **Create custom evaluators** for domain-specific criteria
-- ✅ **Optimize prompts** and create new agent versions
-- ✅ **Compare versions** based on batch eval results
-
-> **Follow your intuition** — explore various options and see what happens. Use **Ask AI** in the Foundry portal to explain outcomes.
-
-### Capture Feedback
-Keep track of prompts you use and any issues you encounter. Your feedback helps improve the skill!
-
-<!--
-SPEAKER NOTES:
-This is exploratory. The skill is in early preview — behavior may be non-deterministic. Try different things, build intuition, and share feedback.
-Duration: ~3 min
--->
-
----
-
-<!-- _class: section-title -->
-
-# Step 4: Build with Foundry SDK
-### Path B — Code-First Step-by-Step
-
-⏱️ ~15 minutes
-
-<!--
-SPEAKER NOTES:
-Path B is the traditional approach — you'll run Jupyter notebooks that walk through each concept manually.
+Participants run Jupyter notebooks that walk through each concept manually.
 -->
 
 ---
@@ -659,8 +520,10 @@ Duration: ~1 min
 
 ```python
 # Example: Creating an agent with the Foundry SDK
+model_name = os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"]
+
 agent = project_client.agents.create_agent(
-    model="gpt-4.1",
+    model=model_name,
     name="contoso-travel-concierge",
     instructions="You are the Contoso Travel Concierge..."
 )
@@ -783,7 +646,7 @@ Let's bring it all together with key takeaways and next steps.
 
 The Microsoft Foundry Control Plane provides tools for **security, compliance, fleet management, and observability** — accessed through the "Operate" tab.
 
-![w:800](../../assets/foundry-control-plane.png)
+![w:800](../../../assets/foundry-control-plane.png)
 
 > Today we focused on **Observability** — but the platform covers the full lifecycle.
 
@@ -841,7 +704,7 @@ Duration: ~1 min
 # Thank You!
 
 ### Next Steps
-- 🔀 **Try the other path** (A or B) if time permits
+- 🔎 **Explore optional labs** if your instructor includes them
 - 📌 **Fork & watch** the repo for v2 updates (May/June 2026)
 - 🆕 **v2 preview:** Hosted agents with custom code + containerized runtimes
 - 💬 **Share feedback** — your input shapes the next iteration
@@ -851,6 +714,6 @@ Duration: ~1 min
 
 <!--
 SPEAKER NOTES:
-Thank everyone for attending. Encourage them to try the other path, fork the repo, and share feedback. V2 will expand to hosted agents with containerized environments.
+Thank everyone for attending. Encourage them to review optional labs, fork the repo, and share feedback. V2 will expand to hosted agents with containerized environments.
 Duration: ~1 min
 -->

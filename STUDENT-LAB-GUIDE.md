@@ -15,52 +15,19 @@ cleanup step.
 
 ## Start checklist
 
-Before starting either path:
+Before starting the labs:
 
 1. Open `WORKSHOP-QUICKSTART.md`.
-2. Confirm `labs\notebooks\.env` exists.
-3. Confirm your `.env` includes `WORKSHOP_GROUP_ID`.
-4. Run the VS Code task **Workshop: Check readiness**.
-5. Continue only when the instructor says the environment is ready.
+2. Open the cloned repository in local VS Code.
+3. Reopen the repository in the dev container.
+4. Confirm `labs\notebooks\.env` exists.
+5. Confirm your `.env` includes `WORKSHOP_GROUP_ID`.
+6. Run the VS Code task **Workshop: Check readiness**.
+7. Continue only when the instructor says the environment is ready.
 
-## Path A: Foundry Skills
+## SDK notebook labs
 
-Use this path when the instructor wants Copilot Chat to drive the
-observe-optimize loop.
-
-Open Copilot Chat and paste this prompt. Replace the placeholders first:
-
-```text
-Use the Microsoft Foundry observe skill for this prepared workshop.
-
-Project endpoint: <PASTE_PROJECT_ENDPOINT>
-Group id: <PASTE_GROUP_ID>
-
-Evaluate the Contoso Travel agent and help me understand the results.
-Prefix every dataset, evaluation, run, and version you create with my group id.
-Do not delete, replace, or clean up shared resources unless I explicitly ask.
-Before taking an action that changes Foundry resources, briefly tell me what you will create or update.
-```
-
-When Copilot responds:
-
-| If Copilot asks... | Do this |
-| --- | --- |
-| To confirm the project endpoint | Check it matches the instructor-provided endpoint |
-| To choose or create names | Use your group id prefix |
-| To delete or replace resources | Stop and ask the instructor |
-| To run a long evaluation | Ask the instructor if this is part of the current exercise |
-
-Observe these outcomes:
-
-1. Copilot identifies the Foundry project and agent context.
-2. Copilot proposes an evaluation or observe loop.
-3. Results include quality, safety, or agent-performance findings.
-4. The created assets use your group id prefix.
-
-## Path B: SDK notebooks
-
-Use this path when the instructor wants you to run notebook cells.
+Use this path to run the workshop notebooks step by step.
 
 Open `labs\notebooks\1-prompt-agents\README.sdk.md`, then follow this short
 sequence.

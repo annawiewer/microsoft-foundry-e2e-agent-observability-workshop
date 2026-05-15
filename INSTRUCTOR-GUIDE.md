@@ -10,8 +10,8 @@ This repository is currently prepared for:
 | Decision | Value |
 | --- | --- |
 | Foundry resources | One shared Foundry project for the class |
-| Environments | GitHub Codespaces and local VS Code dev containers |
-| Lab paths | Foundry Skills and Foundry SDK notebooks |
+| Environments | Local VS Code dev containers |
+| Lab path | Foundry SDK notebooks |
 | Branching | Changes are made on the current branch |
 
 The shared-project model is the easiest to explain, but it is also the easiest
@@ -98,16 +98,34 @@ Do not give participants broad Azure `Contributor` or `Owner` access unless the
 workshop intentionally includes infrastructure provisioning. They do not need
 `Cognitive Services OpenAI Contributor` for the prepared labs.
 
-## Codespaces setup
+## Local dev container setup
 
-Before the session:
+Before the session, send participants this pre-work:
 
-1. Test a fresh Codespace from this repository.
-2. Confirm that the devcontainer installs Python dependencies.
-3. Place or generate `labs\notebooks\.env` using a secure process.
-4. Run the **Workshop: Check readiness** VS Code task.
-5. Open `lab-01-setup.ipynb` and run the validation cells.
-6. Open Copilot Chat and confirm Foundry Skills are available if using Path A.
+1. Install VS Code.
+2. Install Docker Desktop.
+3. Start Docker Desktop once and confirm it is running.
+4. Install the VS Code Dev Containers extension.
+5. Install Git.
+6. Clone the repository locally:
+
+   ```powershell
+   cd $HOME\Desktop
+   git clone https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop.git
+   cd microsoft-foundry-e2e-agent-observability-workshop
+   code .
+   ```
+
+7. Select **Reopen in Container** in VS Code, then wait until setup finishes.
+
+Before participants join:
+
+1. Test a fresh local clone from this repository.
+2. Open the repository in VS Code and select **Reopen in Container**.
+3. Confirm that the dev container installs Python dependencies.
+4. Place or generate `labs\notebooks\.env` using a secure process.
+5. Run the **Workshop: Check readiness** VS Code task.
+6. Open `lab-01-setup.ipynb` and run the validation cells.
 
 For instructor validation, you can also run the readiness script with online
 checks from a terminal:
@@ -115,19 +133,6 @@ checks from a terminal:
 ```bash
 python labs/notebooks/check-workshop-ready.py --online
 ```
-
-If participants use personal GitHub accounts, do not assume you can preload
-their Codespaces secrets. Have a simple secure fallback for distributing the
-prepared `.env` values.
-
-## Local dev container setup
-
-Before the session, tell local participants to install:
-
-1. VS Code.
-2. Docker Desktop.
-3. VS Code Dev Containers extension.
-4. Git.
 
 During validation, test on a machine that is not already configured as the
 instructor machine. This catches missing Docker, proxy, and extension issues.
@@ -145,7 +150,7 @@ Suggested sequence:
 3. Confirm `labs\notebooks\.env` exists.
 4. Run the **Workshop: Check readiness** task.
 5. Open `STUDENT-LAB-GUIDE.md`.
-6. Start with Path A or Path B based on your agenda.
+6. Start the SDK notebook sequence.
 7. Run red-team scans instructor-led because they are slower and quota-sensitive.
 
 ## Shared-project guardrails
@@ -167,8 +172,7 @@ Announce these rules at the start:
 | Participants lack Azure access | Validate each identity before the session |
 | Red-team scans are slow or quota-sensitive | Run instructor-led and keep pre-run output as fallback |
 | API keys leak through screenshots | Avoid distributing keys; remind participants not to share secrets |
-| Local environments vary | Prefer Codespaces for non-coders |
-| Copilot Skills unavailable | Validate Copilot entitlement and extensions before choosing Path A |
+| Local environments vary | Validate Docker, VS Code, Dev Containers, and proxy settings before the workshop |
 | Evaluation runs fail with `ProjectMIUnauthorized` | Confirm the project managed identity has access and the connected storage network allows Foundry Evaluations |
 | Red-team scans are unavailable in the project region | Use the validated Sweden Central universal project or another supported-region project |
 
@@ -177,7 +181,7 @@ Announce these rules at the start:
 Run this as an instructor from a fresh environment:
 
 1. Open `WORKSHOP-QUICKSTART.md`.
-2. Create or open a Codespace.
+2. Clone the repository locally and reopen it in the dev container.
 3. Confirm `labs\notebooks\.env` exists.
 4. Run the **Workshop: Check readiness** task.
 5. Run `lab-01-setup.ipynb` validation cells.

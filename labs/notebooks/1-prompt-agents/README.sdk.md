@@ -6,13 +6,13 @@
 > prefix shared Foundry resources.
 > For the simplest participant flow, use `STUDENT-LAB-GUIDE.md`.
 
-By now you should have completed the _infastructure setup_ and _dev environment_ setup steps and have a running GitHub Codespaces that is connected to an existing Foundry project in your Azure subscription.
+By now you should have completed the _infrastructure setup_ and _local dev container_ setup steps, and your VS Code environment should be connected to an existing Foundry project in your Azure subscription.
 
-In this path, you'll execute notebooks in order - walking you through the journey of building a Contoso Travel agent, grounding it in custom data and tools, then evaluating and tracing it - and running an AI Red Teaming scan to assess vulnerability to attack.
+In these labs, you'll execute notebooks in order - walking you through the journey of building a Contoso Travel agent, grounding it in custom data and tools, then evaluating and tracing it - and running an AI Red Teaming scan to assess vulnerability to attack.
 
 ### 2.1 How To: Run a Notebook
 
-The GitHub Codespaces environment has pre-instealled extensions and tools to support Jupyter notebooks. Just take these actions to "Run" any notebook:
+The local VS Code dev container has pre-installed extensions and tools to support Jupyter notebooks. Take these actions to run any notebook:
 
 1. Open the notebook (`.ipynb` file) in Visual Studio Code
 1. Click **Select Kernel**, and pick the **Python 3.12** option.
