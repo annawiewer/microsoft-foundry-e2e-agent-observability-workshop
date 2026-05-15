@@ -14,6 +14,7 @@ azure-monitor-opentelemetry
 ipykernel
 ipywidgets
 jupyter
+psutil
 
 # Data
 pandas
