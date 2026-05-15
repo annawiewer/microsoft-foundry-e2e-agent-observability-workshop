@@ -4,6 +4,9 @@ Use this guide during an instructor-led workshop. You do not need to write code.
 Your job is to run one step at a time, observe the result, and stop before any
 cleanup step.
 
+The instructor has already completed **Lab 00: Setup Your Foundry Project**.
+Do not create a Foundry project or Azure resources during the workshop.
+
 ## Golden rules
 
 1. Use your assigned group id whenever a name is requested.
@@ -11,7 +14,8 @@ cleanup step.
 3. Do not edit code unless the instructor asks you to.
 4. Do not run sections named `Cleanup`.
 5. Do not delete anything in the Foundry portal.
-6. If you see a red error, stop and ask for help.
+6. Do not run Lab 00 unless the instructor explicitly asks.
+7. If you see a red error, stop and ask for help.
 
 ## Start checklist
 

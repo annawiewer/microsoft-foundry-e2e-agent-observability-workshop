@@ -13,9 +13,10 @@ travel assistant for **Contoso Travel**.
 | Working self-paced | [Infrastructure Setup](./labs/notebooks/0-setup/lab-00-setup-project.md), then [Local Dev Container Setup](./labs/notebooks/0-setup/lab-01-setup-local-dev-container.md) | Build your own Foundry project and environment |
 | Looking for help | [Support](./SUPPORT.md) | How to file issues or ask for help |
 
-If you are in an instructor-led workshop, **do not start with the setup labs**.
-Your instructor should provide the Foundry endpoint, model deployment, group id,
-and prepared `.env` file.
+If you are in an instructor-led workshop, **do not start with Lab 00**. The
+Foundry project has already been prepared by your instructor. Your instructor
+should provide the Foundry endpoint, model deployment, group id, and prepared
+`.env` file.
 
 ## What participants need
 
@@ -70,9 +71,9 @@ If `code .` does not open VS Code, open VS Code manually and select
 6. Open [Student Lab Guide](./STUDENT-LAB-GUIDE.md).
 7. Follow the SDK notebook lab sequence.
 
-**Golden rules:** use your group id in names, run notebook cells one at a time,
-do not run `Cleanup` sections, do not delete shared Foundry resources, and stop
-when you see a red error.
+**Golden rules:** do not run Lab 00 in a prepared workshop, use your group id in
+names, run notebook cells one at a time, do not run `Cleanup` sections, do not
+delete shared Foundry resources, and stop when you see a red error.
 
 ## Main lab path
 
@@ -104,7 +105,7 @@ By the end of the main path, you should understand how to:
 | [WORKSHOP-QUICKSTART.md](./WORKSHOP-QUICKSTART.md) | Participant entry point for prepared workshops |
 | [STUDENT-LAB-GUIDE.md](./STUDENT-LAB-GUIDE.md) | Main checklist for participants |
 | [INSTRUCTOR-GUIDE.md](./INSTRUCTOR-GUIDE.md) | Setup and facilitation guidance |
-| [labs/notebooks/0-setup](./labs/notebooks/0-setup) | Self-paced infrastructure and environment setup |
+| [labs/notebooks/0-setup](./labs/notebooks/0-setup) | Self-paced or instructor setup; participants skip Lab 00 in prepared workshops |
 | [labs/notebooks/1-prompt-agents](./labs/notebooks/1-prompt-agents) | SDK notebook labs |
 | [labs/data](./labs/data) | Sample travel data used by the notebooks |
 

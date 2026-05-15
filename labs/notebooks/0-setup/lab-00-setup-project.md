@@ -1,8 +1,8 @@
 # Lab 00: Setup Your Foundry Project
 
-> **Instructor-led workshop:** Skip this lab if your instructor has already
-> prepared a shared Foundry project. Start from `WORKSHOP-QUICKSTART.md`
-> instead.
+> **Prepared instructor-led workshop:** This lab is already complete. Do not run
+> it unless your instructor explicitly asks you to create a new Foundry project.
+> Start from `WORKSHOP-QUICKSTART.md` instead.
 
 Follow the steps below to complete the setup of your Microsoft Foundry project.
 

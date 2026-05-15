@@ -3,6 +3,9 @@
 Use this page when an instructor has already prepared the Microsoft Foundry
 project and the development environment for the class.
 
+For this prepared workshop, **Lab 00: Setup Your Foundry Project is already
+complete**. Participants should not create a Foundry project or Azure resources.
+
 If you are doing the workshop on your own, start with
 [Lab 00: Setup Your Foundry Project](./labs/notebooks/0-setup/lab-00-setup-project.md)
 instead.
@@ -41,10 +44,11 @@ main lab checklist.
 This workshop uses one shared Foundry project for the class. To avoid breaking
 other groups:
 
-1. Always use your assigned group or seat id in names when a lab asks for a name.
-2. Do not run cells or commands labeled `Cleanup` unless the instructor tells you.
-3. Do not delete agents, evaluations, traces, deployments, or conversations in the Foundry portal.
-4. If you see an error, stop and ask the instructor before retrying many times.
+1. Do not run Lab 00 or create new Azure/Foundry infrastructure.
+2. Always use your assigned group or seat id in names when a lab asks for a name.
+3. Do not run cells or commands labeled `Cleanup` unless the instructor tells you.
+4. Do not delete agents, evaluations, traces, deployments, or conversations in the Foundry portal.
+5. If you see an error, stop and ask the instructor before retrying many times.
 
 ## Set up local VS Code
 
