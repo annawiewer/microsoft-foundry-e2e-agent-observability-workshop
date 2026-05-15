@@ -86,13 +86,13 @@ Use groups instead of assigning roles to individual participants one by one.
 
 | Identity | Scope | Role | Why |
 | --- | --- | --- | --- |
-| Participant group | Foundry project | `Azure AI User` | Build prompt agents, run conversations, evaluations, and red-team scans in the project |
+| Participant group | Foundry project | `Foundry User` | Build prompt agents, run conversations, evaluations, and red-team scans in the project |
 | Participant group | Foundry account | `Reader` | See the account/project context in Azure/Foundry without managing infrastructure |
-| Project managed identity | Foundry project | `Azure AI User` | Required by Foundry project data-plane operations |
+| Project managed identity | Foundry project | `Foundry User` | Required by Foundry project data-plane operations |
 | Project managed identity | Foundry account | `Cognitive Services OpenAI User` | Lets evaluation services call the model deployment |
 | Project managed identity | Connected storage account | `Storage Blob Data Contributor` | Lets Foundry Evaluations read/write evaluation artifacts |
 | Foundry account managed identity | Connected storage account | `Storage Blob Data Contributor` | Supports account/project storage connection flows |
-| Instructor/admin group | Subscription or resource group | `Owner` or `Azure AI Owner` plus role assignment rights | Create resources, deploy models, assign roles, and recover the workshop |
+| Instructor/admin group | Subscription or resource group | `Owner`, or `Contributor` plus `User Access Administrator` | Create resources, deploy models, assign roles, and recover the workshop |
 
 Do not give participants broad Azure `Contributor` or `Owner` access unless the
 workshop intentionally includes infrastructure provisioning. They do not need
