@@ -1,7 +1,7 @@
 # Workshop Quickstart
 
 Use this page when an instructor has already prepared the Microsoft Foundry
-project and the development environment for the class.
+project and workshop environment values for the class.
 
 For this prepared workshop, **Lab 00: Setup Your Foundry Project is already
 complete**. Participants should not create a Foundry project or Azure resources.
@@ -143,5 +143,5 @@ Do not run these during a prepared workshop unless instructed:
 
 1. Copy the first red error message or take a screenshot.
 2. Include your group id.
-3. Tell the instructor which path and notebook you are using.
+3. Tell the instructor which notebook you are using.
 4. Do not share API keys or secrets in chat, screenshots, or issues.

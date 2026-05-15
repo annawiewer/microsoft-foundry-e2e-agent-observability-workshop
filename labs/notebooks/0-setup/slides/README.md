@@ -63,7 +63,7 @@ The slides are written in standard Markdown with MARP extensions:
 - **`---`** separates slides
 - **Front matter** (top of file) configures theme, pagination, header/footer
 - **`<!-- _class: title -->`** applies special slide classes
-- **`![w:480](path)`** sets image width
+- **MARP image width syntax** sets image width, for example `w:480` with an image from `../assets/`
 - **`<!-- SPEAKER NOTES: ... -->`** adds presenter notes
 - **Images** are in `../assets/` (the `0-setup/assets` folder)
 
