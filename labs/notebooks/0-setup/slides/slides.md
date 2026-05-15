@@ -710,7 +710,7 @@ Duration: ~1 min
 - 💬 **Share feedback** — your input shapes the next iteration
 
 **Workshop Repository:**
-[github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop](https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop)
+[github.com/annawiewer/microsoft-foundry-e2e-agent-observability-workshop](https://github.com/annawiewer/microsoft-foundry-e2e-agent-observability-workshop)
 
 <!--
 SPEAKER NOTES:

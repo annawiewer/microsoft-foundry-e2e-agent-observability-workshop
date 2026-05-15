@@ -51,7 +51,7 @@ Complete this setup before the live session starts:
 
    ```powershell
    cd $HOME\Desktop
-   git clone https://github.com/Azure-Samples/microsoft-foundry-e2e-agent-observability-workshop.git
+   git clone https://github.com/annawiewer/microsoft-foundry-e2e-agent-observability-workshop.git
    cd microsoft-foundry-e2e-agent-observability-workshop
    code .
    ```
