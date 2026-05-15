@@ -1,5 +1,7 @@
 # Core Azure AI SDK
-azure-ai-projects>=2.0.0
+# Keep this aligned with the Agent Framework dependency chain below:
+# agent-framework-core 1.0.0rc3 currently requires azure-ai-projects==2.0.0b4.
+azure-ai-projects==2.0.0b4
 azure-identity
 python-dotenv
 
@@ -17,10 +19,10 @@ jupyter
 pandas
 
 # Hosted Agents — Microsoft Agent Framework (MAF)
-azure-ai-agentserver-agentframework>=1.0.0b16
+azure-ai-agentserver-agentframework==1.0.0b17
 
 # Hosted Agents — LangGraph
-azure-ai-agentserver-langgraph>=1.0.0b16
+azure-ai-agentserver-langgraph==1.0.0b17
 langgraph
 langchain-core
 langchain-openai
